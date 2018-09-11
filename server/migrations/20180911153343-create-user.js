@@ -38,7 +38,7 @@ module.exports = {
       },
       gender: {
         allowNull: false,
-        type: Sequelize.TINYINT
+        type: Sequelize.INTEGER
       },
       password: {
         allowNull: false,
