@@ -1,0 +1,24 @@
+{
+  "name": "finalprojectadsofsito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkHaliax96/FinalProjectAdsofsito.git"
+  },
+  "author": "gekko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkHaliax96/FinalProjectAdsofsito/issues"
+  },
+  "homepage": "https://github.com/DarkHaliax96/FinalProjectAdsofsito#readme",
+  "dependencies": {
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0"
+  }
+}
