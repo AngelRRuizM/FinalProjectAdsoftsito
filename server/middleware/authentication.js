@@ -24,15 +24,3 @@ exports.ensureAuth = (req, res, next) => {
 
 	next(); 
 };
-
-exports.ensureRoot = (req, res, next) => {
-	if(!req.user){
-		return res.status(403).send({ message: 'No authentication was found.'});
-	}
-
-	if(!req.user.system_role !== 'root'){
-		return res.status(403).send({ message: 'Permission denied.'});
-	}
-
-	next();
-};
