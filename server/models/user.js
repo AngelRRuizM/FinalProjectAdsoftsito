@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     confirmation_code: {
@@ -10,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     first_name: {
-      typr: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     last_name:{
@@ -20,10 +21,6 @@ module.exports = (sequelize, DataTypes) => {
     organizer_alias:{
       type: DataTypes.STRING,
       defaultValue: false
-    },
-    email_address: {
-      type: DataTypes.STRING,
-      allowNull: false
     },
     age: {
       type: DataTypes.INTEGER,

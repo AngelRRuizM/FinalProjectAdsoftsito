@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DarkHaliax96/FinalProjectAdsofsito#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "jwt-simple": "^0.5.1",
