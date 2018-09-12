@@ -7,11 +7,11 @@ const jwt = require('../services/jwt');
 module.exports = {
     login(req, res) {
         // check that params are not null, undefined or empty string
-        if(!req.body.email_address || !req.body.password){ 
+        if(!req.body.id || !req.body.password){ 
             return res.status(400).send({message: 'The post body must contain a user email and password field.'});
         }
         
-        let email = (String)(req.body.email_address).toLocaleLowerCase();
+        let email = (String)(req.body.id).toLocaleLowerCase();
         let password = req.body.password;
 
         User.findById(email)
