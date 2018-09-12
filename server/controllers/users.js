@@ -61,7 +61,7 @@ module.exports = {
             return User
                 .create({
                     id: req.body.id,
-                    confirmed: false,
+                    confirmed: true,
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,
                     organizer_alias: req.body.organizer_alias,
