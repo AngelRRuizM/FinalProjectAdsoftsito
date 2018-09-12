@@ -5,7 +5,6 @@ module.exports = {
       id: {
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
         type: Sequelize.INTEGER
       },
       confirmation_code: {
@@ -30,6 +29,7 @@ module.exports = {
       },
       email_address: {
         allowNull: false,
+        primaryKey: true,
         type: Sequelize.STRING
       },
       age: {
