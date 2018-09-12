@@ -6,6 +6,13 @@ module.exports = {
 
     //Method for creating a user
     create(req, res) {
+        console.log(req.body);
+        if (!req.body.id){
+            return res.status(400).send({
+                message: 'The attribute email cannot be null or empty.'
+            });
+        }
+        
         if (!req.body.first_name){
             return res.status(400).send({
                 message: 'The attribute first name cannot be null or empty.'
@@ -21,12 +28,6 @@ module.exports = {
         if (!req.body.last_name){
             return res.status(400).send({
                 message: 'The attribute organizer alias cannot be null or empty.'
-            });
-        }
-
-        if (!req.body.email_address){
-            return res.status(400).send({
-                message: 'The attribute email cannot be null or empty.'
             });
         }
 
@@ -59,11 +60,11 @@ module.exports = {
 
             return User
                 .create({
-                    confirmed: false,
+                    id: req.body.id,
+                    confirmed: true,
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,
                     organizer_alias: req.body.organizer_alias,
-                    email_address: req.body.email_address,
                     age: req.body.age,
                     gender: req.body.gender,
                     password: hash,
@@ -143,11 +144,11 @@ module.exports = {
 
                 return user
                     .update({
+                        id: req.body.id || user.id,
                         confirmed: user.confirmed,
                         first_name: req.body.first_name || user.first_name,
                         last_name: req.body.last_name || user.last_name,
                         organizer_alias: req.body.organizer_alias || user.organizer_alias,
-                        email_address: req.body.email_address || user.email_address,
                         age: req.body.age || user.age,
                         gender: req.body.gender || user.gender,
                         password: user.password,
